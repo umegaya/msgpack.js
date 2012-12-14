@@ -253,6 +253,7 @@ function decode() { // @return Mix:
     var size, i, iz, c, num = 0,
         sign, exp, frac, ary, hash,
         buf = _buf, type = buf[++_idx];
+        
     if (type >= 0xe0) {             // Negative FixNum (111x xxxx) (-32 ~ -1)
         return type - 0x100;
     }
